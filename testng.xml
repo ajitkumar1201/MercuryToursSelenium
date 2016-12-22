@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> 
+<suite name="Suite" parallel="tests" verbose="2" >
+ <parameter name="appURL" value="http://newtours.demoaut.com/"/>
+ <parameter name="userID" value="mercury" />
+ <parameter name="password" value="mercury" />
+ <parameter name="Adult" value="2" />
+  <parameter name="Child" value="2" />
+ <test name="firefoxTest">
+ 	<parameter name="browser" value="Firefox" />
+    <classes>
+	  <class name="com.mercurytours.Test.TCLoginToApplication" />
+	
+	 
+	</classes>
+</test>
+ 
+ 
+</suite>
