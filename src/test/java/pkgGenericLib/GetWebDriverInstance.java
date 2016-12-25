@@ -1,5 +1,4 @@
 package pkgGenericLib;
-
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
@@ -44,10 +43,12 @@ public class GetWebDriverInstance {
 					drivers.put("IE", driver);
 				}
 			break;
-		    case "Chrome":
+			case "Chrome":
 				driver = drivers.get("Chrome");
 				if (driver == null) 
 				{
+					System.out.println(genericPath);
+					
 					System.setProperty("webdriver.chrome.driver",genericPath+"chromedriver.exe");  
 					driver = new ChromeDriver();
 					drivers.put("Chrome", driver);
