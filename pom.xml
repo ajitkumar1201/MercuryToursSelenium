@@ -20,7 +20,7 @@
 				<version>2.5</version>
 				<configuration>
 					<suiteXmlFiles><suiteXmlFile>testng.xml</suiteXmlFile></suiteXmlFiles>
-			
+					
 				</configuration>
       		</plugin>
       	
