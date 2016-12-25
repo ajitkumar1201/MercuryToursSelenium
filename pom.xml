@@ -19,10 +19,10 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.19.1</version>
-				<configuration>
+				<!-- <configuration>
 					<suiteXmlFiles><suiteXmlFile>testng.xml</suiteXmlFile></suiteXmlFiles>
 					
-				</configuration>
+				</configuration> -->
       		</plugin>
       	
 		</plugins>
@@ -67,6 +67,11 @@
 		        <version>1.0.4</version>
 		        <scope>test</scope>
 		    </dependency> -->
+		     <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-exec</artifactId>
+            <version>1.3</version>
+        </dependency>
 		 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-htmlunit-driver -->
 			<dependency>
 			    <groupId>org.seleniumhq.selenium</groupId>
@@ -78,7 +83,11 @@
 			    <artifactId>webdrivermanager</artifactId>
 			    <version>1.5.0</version>
 			</dependency>
-            
+            <dependency>
+		        <groupId>commons-logging</groupId>
+		        <artifactId>commons-logging</artifactId>
+		        <version>1.2</version>
+			</dependency>
     <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 			<dependency>
 			    <groupId>org.testng</groupId>

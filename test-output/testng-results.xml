@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="21803" started-at="2016-12-22T07:39:18Z" finished-at="2016-12-22T07:39:40Z">
+  <suite name="Suite" duration-ms="24068" started-at="2016-12-25T22:59:34Z" finished-at="2016-12-25T22:59:58Z">
     <groups>
       <group name="TCLoginToApplication">
-        <method signature="TCLoginToApplication.Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.mercurytours.Test.TCLoginToApplication@5594a1b5]" name="Login" class="com.mercurytours.Test.TCLoginToApplication"/>
+        <method signature="TCLoginToApplication.Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.mercurytours.Test.TCLoginToApplication@6f7fd0e6]" name="Login" class="com.mercurytours.Test.TCLoginToApplication"/>
       </group> <!-- TCLoginToApplication -->
     </groups>
-    <test name="firefoxTest" duration-ms="21803" started-at="2016-12-22T07:39:18Z" finished-at="2016-12-22T07:39:40Z">
+    <test name="firefoxTest" duration-ms="24068" started-at="2016-12-25T22:59:34Z" finished-at="2016-12-25T22:59:58Z">
       <class name="com.mercurytours.Test.TCLoginToApplication">
-        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.mercurytours.Test.TCLoginToApplication@5594a1b5]" name="Login" duration-ms="21784" started-at="2016-12-21T23:39:18Z" finished-at="2016-12-21T23:39:40Z">
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.mercurytours.Test.TCLoginToApplication@6f7fd0e6]" name="Login" duration-ms="24050" started-at="2016-12-25T14:59:34Z" finished-at="2016-12-25T14:59:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Firefox]]>
+                <![CDATA[Chrome]]>
               </value>
             </param>
             <param index="1">
