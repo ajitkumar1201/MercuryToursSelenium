@@ -9,6 +9,7 @@
  <test name="firefoxTest">
  	<parameter name="browser" value="Chrome" />
     <classes>
+    <class name="com.mercurytours.Test.TCLaunchApplication" />
 	  <class name="com.mercurytours.Test.TCLoginToApplication" />
 	
 	 

@@ -1,7 +1,10 @@
 pkgGenericLib\DatabaseFunction.class
-pkgGenericLib\Synchronization$Property.class
 com\mercurytours\Test\TCLoginToApplication.class
 pkgGenericLib\GetWebDriverInstance.class
 com\mercurytours\Pages\FNLoginToApplication.class
+pkgGenericLib\Synchronization$Property.class
+pkgGenericLib\ReporterLog.class
+com\mercurytours\Pages\FNLaunchApplication.class
 pkgGenericLib\Synchronization$1.class
 pkgGenericLib\Synchronization.class
+com\mercurytours\Test\TCLaunchApplication.class

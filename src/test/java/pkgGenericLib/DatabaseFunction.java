@@ -1,6 +1,5 @@
 package pkgGenericLib;
 
-
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.Statement;
@@ -19,7 +18,7 @@ public class DatabaseFunction
     public String sqlQuery;
     public static String fileType;
     
-    public String genericPath=System.getProperty("user.dir").concat("\\src\\test\\resources\\TestData\\");
+    
     public DatabaseFunction()
     {
     	 
@@ -43,13 +42,15 @@ public class DatabaseFunction
     //##################################################################################################################################
     public Connection fnGetDbConnection(String FileType)
     {   
-    	
+    	String genericPath=System.getProperty("user.dir").concat("\\src\\test\\resources\\TestData\\");
     	try
     	{
 	    	if("Input".equals(FileType))
 	    	   
 	    	{
-	    		con = DriverManager.getConnection( "jdbc:odbc:Driver={Microsoft Excel Driver (*.xls)};DBQ=" + genericPath);
+	    		System.out.println(genericPath + "TDMercuryTours.xls");
+	    		con = DriverManager.getConnection( "jdbc:odbc:Driver={Microsoft Excel Driver (*.xls)};DBQ=" + genericPath + "TDMercuryTours.xls");
+	    		
 	    	}
 	    	/*if("ObjectRepository".equals(FileType))
 		    	   
@@ -75,6 +76,7 @@ public class DatabaseFunction
     	}
     	catch(Exception exc)
     	{
+    		
     		System.out.println("fnGetDbConnectionDBConnection Failed"+exc);
     	}
     	
@@ -108,7 +110,7 @@ try
     	
     	 s=res.getString(1);
     	val=s.charAt(0);
-    	 
+    	 System.out.println(val);
     }
  
    
