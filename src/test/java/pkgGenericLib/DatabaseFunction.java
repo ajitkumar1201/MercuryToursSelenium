@@ -18,9 +18,11 @@ public class DatabaseFunction
     public static int projectVersionID,projectID,runID,testSuiteID,testCaseID,testDataID;
     public String sqlQuery;
     public static String fileType;
-
+    
+    public String genericPath=System.getProperty("user.dir").concat("\\src\\test\\resources\\TestData\\");
     public DatabaseFunction()
     {
+    	 
         //Connecting with Database
     try
     {
@@ -28,7 +30,9 @@ public class DatabaseFunction
         Path=System.getProperty("user.dir");
         Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
         System.out.println("Database connected Successfully.");
-       
+        
+
+
     }
     catch (Exception exc)
     {
@@ -45,9 +49,9 @@ public class DatabaseFunction
 	    	if("Input".equals(FileType))
 	    	   
 	    	{
-	    		con = DriverManager.getConnection( "jdbc:odbc:Driver={Microsoft Excel Driver (*.xls)};DBQ=C:\\work_b\\POC\\src\\main\\resources\\InputSheet1.xls");
+	    		con = DriverManager.getConnection( "jdbc:odbc:Driver={Microsoft Excel Driver (*.xls)};DBQ=" + genericPath);
 	    	}
-	    	if("ObjectRepository".equals(FileType))
+	    	/*if("ObjectRepository".equals(FileType))
 		    	   
 	    	{
 	    		con = DriverManager.getConnection( "jdbc:odbc:Driver={Microsoft Excel Driver (*.xls)};DBQ=C:\\work_b\\POC\\src\\main\\resources\\ObjectRepository1.xls");
@@ -61,7 +65,7 @@ public class DatabaseFunction
 		    	   
 	    	{
 	    		con = DriverManager.getConnection( "jdbc:odbc:Driver={Microsoft Excel Driver (*.xls)};DBQ=C:\\work_b\\POC\\src\\main\\resources\\Result.xls");
-	    	}
+	    	}*/
 	    	Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
 	        
 	         st=con.createStatement();
@@ -101,8 +105,7 @@ try
     
     while(res.next())
     {
-    	//System.out.println(res.getString(1));
-    	//RowSet rws=
+    	
     	 s=res.getString(1);
     	val=s.charAt(0);
     	 

@@ -12,7 +12,7 @@ public class GetWebDriverInstance {
 
 	private static Map<String, WebDriver> drivers = new HashMap<String, WebDriver>();
 	//private static  WebDriver  driver= null;
- 	private static String  genericPath=System.getProperty("user.dir").concat("\\src\\test\\resources\\");
+ 	private static String  genericPath=System.getProperty("user.dir").concat("\\src\\test\\resources\\DriverExecutable\\");
 
 	/*
 	 * Factory method for getting browsers
@@ -23,7 +23,7 @@ public class GetWebDriverInstance {
 		switch (browserName) 
 		{
 			case "Firefox":
-				   System.setProperty("webdriver.gecko.driver", "Q:\\AutomationFramework\\MercuryTours\\src\\test\\resources\\geckodriver.exe");
+				   System.setProperty("webdriver.gecko.driver", "Q:\\AutomationFramework\\MercuryTours\\src\\test\\resources\\DriverExecutable\\geckodriver.exe");
 		 			String path=new File(".").getAbsolutePath();
 	
 				driver = drivers.get("Firefox");
