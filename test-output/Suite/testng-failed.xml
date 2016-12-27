@@ -9,11 +9,11 @@
   <test name="firefoxTest(failed)" parallel="tests">
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="com.mercurytours.Test.TCLoginToApplication">
+      <class name="com.mercurytours.Test.TCLaunchApplication">
         <methods>
-          <include name="Login" invocation-numbers="0"/>
+          <include name="LaunchApplication" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.mercurytours.Test.TCLoginToApplication -->
+      </class> <!-- com.mercurytours.Test.TCLaunchApplication -->
     </classes>
   </test> <!-- firefoxTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

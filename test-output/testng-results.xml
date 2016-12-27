@@ -2,41 +2,26 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="24068" started-at="2016-12-25T22:59:34Z" finished-at="2016-12-25T22:59:58Z">
+  <suite name="Suite" duration-ms="4615" started-at="2016-12-27T07:19:19Z" finished-at="2016-12-27T07:19:24Z">
     <groups>
-      <group name="TCLoginToApplication">
-        <method signature="TCLoginToApplication.Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.mercurytours.Test.TCLoginToApplication@6f7fd0e6]" name="Login" class="com.mercurytours.Test.TCLoginToApplication"/>
-      </group> <!-- TCLoginToApplication -->
+      <group name="TCLaunchApplication">
+        <method signature="TCLaunchApplication.LaunchApplication(java.lang.String)[pri:0, instance:com.mercurytours.Test.TCLaunchApplication@77caeb3e]" name="LaunchApplication" class="com.mercurytours.Test.TCLaunchApplication"/>
+      </group> <!-- TCLaunchApplication -->
     </groups>
-    <test name="firefoxTest" duration-ms="24068" started-at="2016-12-25T22:59:34Z" finished-at="2016-12-25T22:59:58Z">
-      <class name="com.mercurytours.Test.TCLoginToApplication">
-        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.mercurytours.Test.TCLoginToApplication@6f7fd0e6]" name="Login" duration-ms="24050" started-at="2016-12-25T14:59:34Z" finished-at="2016-12-25T14:59:58Z">
+    <test name="firefoxTest" duration-ms="4615" started-at="2016-12-27T07:19:19Z" finished-at="2016-12-27T07:19:24Z">
+      <class name="com.mercurytours.Test.TCLaunchApplication">
+        <test-method status="PASS" signature="LaunchApplication(java.lang.String)[pri:0, instance:com.mercurytours.Test.TCLaunchApplication@77caeb3e]" name="LaunchApplication" duration-ms="4599" started-at="2016-12-26T23:19:19Z" finished-at="2016-12-26T23:19:24Z">
           <params>
             <param index="0">
               <value>
                 <![CDATA[Chrome]]>
               </value>
             </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://newtours.demoaut.com/]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[mercury]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[mercury]]>
-              </value>
-            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login -->
-      </class> <!-- com.mercurytours.Test.TCLoginToApplication -->
+        </test-method> <!-- LaunchApplication -->
+      </class> <!-- com.mercurytours.Test.TCLaunchApplication -->
     </test> <!-- firefoxTest -->
   </suite> <!-- Suite -->
 </testng-results>

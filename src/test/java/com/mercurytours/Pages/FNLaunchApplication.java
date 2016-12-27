@@ -1,4 +1,5 @@
 package com.mercurytours.Pages;
+
 import pkgGenericLib.ReporterLog;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -20,6 +21,7 @@ public class FNLaunchApplication
 	  public FNLaunchApplication LaunchApp(String appURL) throws InterruptedException 
 	  {
 		  driver.navigate().to(appURL);
+		  
 		  return new FNLaunchApplication(driver);
 	  }
 	 
@@ -27,7 +29,7 @@ public class FNLaunchApplication
 		public void VerifyBasePageTitle(String ExpectedPageTitle) 
 		{
 			String ActualPageTitle = driver.getTitle();
-			ReporterLog.info(ActualPageTitle);
+			ReporterLog.info("Verifying for Page Title after Login." + ActualPageTitle);
 			Assert.assertEquals(ExpectedPageTitle, ActualPageTitle);
 			
 		}
