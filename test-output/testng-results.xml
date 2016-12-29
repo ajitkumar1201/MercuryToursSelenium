@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="4615" started-at="2016-12-27T07:19:19Z" finished-at="2016-12-27T07:19:24Z">
+  <suite name="Suite" duration-ms="24973" started-at="2016-12-29T07:41:55Z" finished-at="2016-12-29T07:42:20Z">
     <groups>
+      <group name="TCLoginToApplication">
+        <method signature="TCLoginToApplication.Login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.mercurytours.Test.TCLoginToApplication@1bce4f0a]" name="Login" class="com.mercurytours.Test.TCLoginToApplication"/>
+      </group> <!-- TCLoginToApplication -->
       <group name="TCLaunchApplication">
-        <method signature="TCLaunchApplication.LaunchApplication(java.lang.String)[pri:0, instance:com.mercurytours.Test.TCLaunchApplication@77caeb3e]" name="LaunchApplication" class="com.mercurytours.Test.TCLaunchApplication"/>
+        <method signature="TCLaunchApplication.LaunchApplication(java.lang.String)[pri:0, instance:com.mercurytours.Test.TCLaunchApplication@1e88b3c]" name="LaunchApplication" class="com.mercurytours.Test.TCLaunchApplication"/>
       </group> <!-- TCLaunchApplication -->
     </groups>
-    <test name="firefoxTest" duration-ms="4615" started-at="2016-12-27T07:19:19Z" finished-at="2016-12-27T07:19:24Z">
+    <test name="BrowserTest" duration-ms="24973" started-at="2016-12-29T07:41:55Z" finished-at="2016-12-29T07:42:20Z">
       <class name="com.mercurytours.Test.TCLaunchApplication">
-        <test-method status="PASS" signature="LaunchApplication(java.lang.String)[pri:0, instance:com.mercurytours.Test.TCLaunchApplication@77caeb3e]" name="LaunchApplication" duration-ms="4599" started-at="2016-12-26T23:19:19Z" finished-at="2016-12-26T23:19:24Z">
+        <test-method status="PASS" signature="LaunchApplication(java.lang.String)[pri:0, instance:com.mercurytours.Test.TCLaunchApplication@1e88b3c]" name="LaunchApplication" duration-ms="4683" started-at="2016-12-28T23:41:55Z" finished-at="2016-12-28T23:41:59Z">
           <params>
             <param index="0">
               <value>
@@ -22,6 +25,29 @@
           </reporter-output>
         </test-method> <!-- LaunchApplication -->
       </class> <!-- com.mercurytours.Test.TCLaunchApplication -->
-    </test> <!-- firefoxTest -->
+      <class name="com.mercurytours.Test.TCLoginToApplication">
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.mercurytours.Test.TCLoginToApplication@1bce4f0a]" name="Login" duration-ms="20269" started-at="2016-12-28T23:41:59Z" finished-at="2016-12-28T23:42:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[mercury]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[mercury]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+      </class> <!-- com.mercurytours.Test.TCLoginToApplication -->
+    </test> <!-- BrowserTest -->
   </suite> <!-- Suite -->
 </testng-results>

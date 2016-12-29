@@ -7,7 +7,7 @@
  
 <param name="Threshold" value="INFO" />
  
-<param name="File" value="logfile.html"/>
+<param name="File" value="logfile.log"/>
  
 <layout class="org.apache.log4j.PatternLayout">
  

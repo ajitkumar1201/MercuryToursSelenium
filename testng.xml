@@ -5,10 +5,11 @@
  <parameter name="userID" value="mercury" />
  <parameter name="password" value="mercury" />
  
- <test name="firefoxTest">
+ <test name="BrowserTest">
  	<parameter name="browser" value="Chrome" />
     <classes>
     <class name="com.mercurytours.Test.TCLaunchApplication" />
+    <class name="com.mercurytours.Test.TCLoginToApplication" />
 	 
 	
 	 

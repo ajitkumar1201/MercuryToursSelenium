@@ -1,6 +1,7 @@
 package com.mercurytours.Pages;
 
 import pkgGenericLib.ReporterLog;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;

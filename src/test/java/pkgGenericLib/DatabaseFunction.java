@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 
+import com.codoid.products.exception.FilloException;
 import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
@@ -17,7 +18,7 @@ public class DatabaseFunction
     public static int projectVersionID,projectID,runID,testSuiteID,testCaseID,testDataID;
     public String sqlQuery;
     public static String fileType;
-    
+  
     Fillo fillo=new Fillo();
     
     public DatabaseFunction()
@@ -68,18 +69,25 @@ public class DatabaseFunction
     // <param name="sqlquery">SqlQuery</param>
     // <returns>Records</returns>
 
-public String fnExecuteSql(String sqlQuery,String FileType)
+public List<String> fnExecuteSql(String sqlQuery,String FileType,String ColName)
+ 
 {
-	
+
+	List<String> list = new ArrayList<String>();
+
+     
+
 	String colVal = null;
 try
 {
 	fnGetDbConnection(FileType);
 	
 	Recordset recordset=con.executeQuery(sqlQuery);
+	
 	while(recordset.next())
 	{
-		List<String>colVal1 = recordset.getFieldNames();
+		list.add(recordset.getField(ColName));
+		
 		
 	}
 
@@ -93,10 +101,11 @@ catch (Exception SQLException)
    System.out.print("Exception in fnExecuteSql:"+SQLException);
     
 }
-return colVal;
+return list;
 
 }
 //##########################################################################################################################################
+
 
 
 }
