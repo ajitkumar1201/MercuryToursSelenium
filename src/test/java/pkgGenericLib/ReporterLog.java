@@ -1,13 +1,20 @@
 package pkgGenericLib;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 public class ReporterLog 
 {
+	
 
 // Initialize Log4j logs
 
-	 	private  static Logger Log = Logger.getLogger(ReporterLog.class.getName());//
-
+	 	private  static Logger Log = Logger.getLogger(ReporterLog.class.getName());
+	 	public ReporterLog()
+	 	{
+	 		String log4jConfPath = "Q:\\AutomationFramework\\MercuryTours\\src\\main\\resources\\Log4j\\log4j.properties";
+			PropertyConfigurator.configure(log4jConfPath);
+	 	}
+	 	
 // This is to print log for the beginning of the test case, as we usually run so many test cases as a test suite
 
 	  public static void startTestCase(String sTestCaseName)

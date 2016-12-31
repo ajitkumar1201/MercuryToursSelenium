@@ -4,7 +4,10 @@
  
  <parameter name="userID" value="mercury" />
  <parameter name="password" value="mercury" />
- 
+ <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
  <test name="BrowserTest">
  	<parameter name="browser" value="Chrome" />
     <classes>

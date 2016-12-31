@@ -17,6 +17,7 @@ public class FNLoginToApplication
 	{           
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
+		//ReporterLog objReporter= new ReporterLog();
 	}
 	//Objects for SignIn Page
 	 @FindBy(name= "userName") private WebElement UserName;
@@ -35,6 +36,7 @@ public class FNLoginToApplication
 			  Password.sendKeys(userPassword);
 			  Login.click();
 			    Thread.sleep(18000);
+			    ReporterLog.info("userName:"+userName+"------"+"Password:"+userPassword);
 		  }
 		  return new FNLoginToApplication(driver);
 	  }
