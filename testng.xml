@@ -9,10 +9,11 @@
       <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
  <test name="BrowserTest">
- 	<parameter name="browser" value="Chrome" />
+ 	<parameter name="browser" value="Firefox" />
     <classes>
     <class name="com.mercurytours.Test.TCLaunchApplication" />
     <class name="com.mercurytours.Test.TCLoginToApplication" />
+    <class name="com.mercurytours.Test.TCFlightFinder" />
 	 
 	
 	 
