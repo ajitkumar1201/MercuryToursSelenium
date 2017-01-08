@@ -35,10 +35,10 @@ public class Synchronization
 		
 	System.out.println(objProp);
 	}
-	public static void implicitWait(WebDriver driver)
+	public static void implicitWait(WebDriver driver,int Secs)
 	{
 
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Secs, TimeUnit.SECONDS);
 	}
 	
 	

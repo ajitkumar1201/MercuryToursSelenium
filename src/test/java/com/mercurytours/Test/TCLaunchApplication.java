@@ -25,7 +25,7 @@ public class TCLaunchApplication
 		
 		DatabaseFunction db = new DatabaseFunction();
 		
-	    rtnListValue=  db.fnExecuteSql("Select * from TCLaunchApplication","Input", "appURL");
+	    rtnListValue=  db.fnExecuteSql("Select appURL from TCLaunchApplication","Input");
 	    
 	    if (rtnListValue.size() == 1)
 	    {
@@ -40,8 +40,8 @@ public class TCLaunchApplication
 
 		objLaunchApplication.LaunchApp(colVal);
 		rtnListValue.clear();
-		rtnListValue=  db.fnExecuteSql("Select * from TCLaunchApplication","Input", "pageTitle");
-	    
+		//rtnListValue=  db.fnExecuteSql("Select * from TCLaunchApplication","Input", "pageTitle");
+		rtnListValue=  db.fnExecuteSql("Select pageTitle from TCLaunchApplication","Input");
 	    if (rtnListValue.size() == 1)
 	    {
 			for(String item:rtnListValue)

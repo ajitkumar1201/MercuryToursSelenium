@@ -2,10 +2,8 @@ package pkgGenericLib;
 
 import java.net.InetAddress;
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.List;
 
-import com.codoid.products.exception.FilloException;
 import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
@@ -69,7 +67,8 @@ public class DatabaseFunction
     // <param name="sqlquery">SqlQuery</param>
     // <returns>Records</returns>
 
-public List<String> fnExecuteSql(String sqlQuery,String FileType,String ColName)
+//public List<String> fnExecuteSql(String sqlQuery,String FileType,String ColName)
+public List<String> fnExecuteSql(String sqlQuery,String FileType)
  
 {
 
@@ -78,19 +77,28 @@ public List<String> fnExecuteSql(String sqlQuery,String FileType,String ColName)
      
 
 	String colVal = null;
+	ArrayList<String> colName;
 try
 {
 	fnGetDbConnection(FileType);
 	
 	Recordset recordset=con.executeQuery(sqlQuery);
-	
-	while(recordset.next())
+	colName=recordset.getFieldNames();
+	System.out.println("colName:"+colName+""+"Size:"+colName.size());
+	for (int iLoop = 0; iLoop < colName.size(); iLoop++)
+	/*if (ColName == "*") 
 	{
-		list.add(recordset.getField(ColName));
-		
-		
+		list.addAll(recordset.);
 	}
-
+	else
+	{*/
+		while(recordset.next())
+		{
+			list.add(recordset.getField(colName.get(iLoop)));
+			
+			
+		}
+	//}
 		recordset.close();
 		con.close();
  
