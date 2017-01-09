@@ -67,15 +67,12 @@ public class DatabaseFunction
     // <param name="sqlquery">SqlQuery</param>
     // <returns>Records</returns>
 
-//public List<String> fnExecuteSql(String sqlQuery,String FileType,String ColName)
-public List<String> fnExecuteSql(String sqlQuery,String FileType)
+public List<String> fnExecuteSql(String sqlQuery,String FileType,String ColName)
+//public List<String> fnExecuteSql(String sqlQuery,String FileType)
  
 {
 
 	List<String> list = new ArrayList<String>();
-
-     
-
 	String colVal = null;
 	ArrayList<String> colName;
 try
@@ -83,22 +80,29 @@ try
 	fnGetDbConnection(FileType);
 	
 	Recordset recordset=con.executeQuery(sqlQuery);
+	
 	colName=recordset.getFieldNames();
-	System.out.println("colName:"+colName+""+"Size:"+colName.size());
-	for (int iLoop = 0; iLoop < colName.size(); iLoop++)
-	/*if (ColName == "*") 
+
+	if (ColName == "*") 
 	{
-		list.addAll(recordset.);
-	}
-	else
-	{*/
-		while(recordset.next())
+		while(recordset.next())  //For All the Columns
 		{
-			list.add(recordset.getField(colName.get(iLoop)));
+			for (int iLoop = 0; iLoop < colName.size(); iLoop++)
+			{
 			
-			
+				list.add(recordset.getField(colName.get(iLoop)));
+				
+				
+			}
 		}
-	//}
+	}
+	else //For Single  Column
+	{
+		while(recordset.next())  //For All the Columns
+		{
+		 list.add(recordset.getField(ColName));
+		}
+	}
 		recordset.close();
 		con.close();
  

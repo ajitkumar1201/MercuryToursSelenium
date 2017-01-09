@@ -22,10 +22,11 @@ public class TCLaunchApplication
 	
   public void LaunchApplication(String browser) throws InterruptedException, MalformedURLException 
   {
-		
+		driver= GetWebDriverInstance.getBrowser(browser);
+		FNLaunchApplication objLaunchApplication = new FNLaunchApplication(driver);
 		DatabaseFunction db = new DatabaseFunction();
 		
-	    rtnListValue=  db.fnExecuteSql("Select appURL from TCLaunchApplication","Input");
+	    rtnListValue=  db.fnExecuteSql("Select * from TCLaunchApplication","Input","appURL");
 	    
 	    if (rtnListValue.size() == 1)
 	    {
@@ -35,13 +36,12 @@ public class TCLaunchApplication
 		    }
 	    }
 	    
-		driver= GetWebDriverInstance.getBrowser(browser);
-		FNLaunchApplication objLaunchApplication = new FNLaunchApplication(driver);
+		
 
 		objLaunchApplication.LaunchApp(colVal);
 		rtnListValue.clear();
-		//rtnListValue=  db.fnExecuteSql("Select * from TCLaunchApplication","Input", "pageTitle");
-		rtnListValue=  db.fnExecuteSql("Select pageTitle from TCLaunchApplication","Input");
+		rtnListValue=  db.fnExecuteSql("Select * from TCLaunchApplication","Input", "pageTitle");
+		
 	    if (rtnListValue.size() == 1)
 	    {
 			for(String item:rtnListValue)
