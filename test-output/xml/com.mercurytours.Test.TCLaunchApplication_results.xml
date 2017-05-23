@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="4.265">
+           time="4.908">
   <properties />
   
   
-            <testcase name="LaunchApplication" time="4.265" classname="com.mercurytours.Test.TCLaunchApplication" />
+            <testcase name="LaunchApplication" time="4.908" classname="com.mercurytours.Test.TCLaunchApplication" />
       
 </testsuite>

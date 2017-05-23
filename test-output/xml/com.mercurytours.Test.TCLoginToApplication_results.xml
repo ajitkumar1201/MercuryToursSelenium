@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="20.234">
+           time="21.443">
   <properties />
   
   
-            <testcase name="Login" time="20.234" classname="com.mercurytours.Test.TCLoginToApplication" />
+            <testcase name="Login" time="21.443" classname="com.mercurytours.Test.TCLoginToApplication" />
       
 </testsuite>
